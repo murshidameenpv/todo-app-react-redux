@@ -1,0 +1,12 @@
+Todo app
+
+ALL ACTIONS FOR REDUx
+
+1.Add  Todo
+2.search Todo
+3.ALL Todo
+4.filter todos
+5.incomplete todos
+6.complete todos
+7.delete todos
+8.mark all complete

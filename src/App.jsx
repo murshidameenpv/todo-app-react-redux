@@ -1,9 +1,12 @@
 import "./App.css";
+import TodoList from "./components/TodoList";
+import Todos from "./components/Todos";
 
 function App() {
   return (
     <>
-      <h1 className="font-extrabold ">Hello</h1>
+      <Todos />
+      <TodoList />
     </>
   );
 }

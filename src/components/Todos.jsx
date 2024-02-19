@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { BsPlus, BsSearch } from "react-icons/bs";
+import { BsPlus, } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/todoSlice.js";
 import FilterButton from "./FilterButton.jsx";
 import TodoList from "./TodoList.jsx";
+import SearchTodo from "./SearchTodo.jsx";
 const Todos = () => {
   const [newTodoText, setNewTodoText] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
@@ -40,23 +39,8 @@ const Todos = () => {
       {/* filter and search */}
       <div className="flex items-center justify-between">
         <FilterButton />
-        <div className="flex items-center mb-4">
-          <input
-            className="flex-grow p-2 border-b-2 border-gray-200 focus:outline-none focus:border-blue-600"
-            type="text"
-            name="addTodoInput"
-            id="addTodoInput"
-            value={searchTerm}
-            placeholder="Search"
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button
-            onClick={handleAddTodo}
-            className="bg-blue-600 p-3 rounded ml-3 text-white hover:bg-blue-400"
-          >
-            <BsSearch />
-          </button>
-        </div>
+        <SearchTodo/>
+        
       </div>
       <TodoList />
     </div>
